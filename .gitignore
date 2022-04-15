@@ -17,3 +17,5 @@ yarn-error.log
 docker-compose.yml
 .gitignore
 docker/nginx/app.conf
+.styleci.yml
+Dockerfile
