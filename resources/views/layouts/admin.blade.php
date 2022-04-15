@@ -33,8 +33,9 @@
 <body>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
         <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-            <h1>Contacts</h1>
-
+            <a href="{{route('admin.contact.home')}}">
+                <h1>Contacts</h1>
+            </a>
         </header>
         <main>
             @yield('content')
