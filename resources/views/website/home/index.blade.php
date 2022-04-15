@@ -16,6 +16,8 @@
             <h5 class="card-title">{{$contact->contact}}</h5>
             <p class="card-text">{{$contact->email}}</p>
             <a href="{{route('website.contact.show', ['id' => $contact->id])}}" class="btn btn-primary ">Edit</a>
+            <a href="{{route('website.contact.show', ['id' => $contact->id])}}" class="btn btn-danger ">Delete</a>
+
         </div>
     </div>
     <br>
