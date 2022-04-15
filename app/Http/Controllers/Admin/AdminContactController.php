@@ -97,6 +97,8 @@ class AdminContactController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->repository->deleteContactById($id);
+
+        return redirect()->route('admin.contact.home');
     }
 }

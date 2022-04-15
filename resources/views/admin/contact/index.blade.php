@@ -17,8 +17,12 @@
         <div class="card-body">
             <h5 class="card-title">{{$contact->contact}}</h5>
             <p class="card-text">{{$contact->email}}</p>
-            <a href="{{route('website.contact.show', ['id' => $contact->id])}}" class="btn btn-primary ">Edit</a>
-            <a href="{{route('website.contact.destroy', ['id' => $contact->id])}}" class="btn btn-danger ">Delete</a>
+            <form action="{{ route('admin.contact.destroy', $contact->id) }}" method="post">
+                @csrf
+                @method('DELETE')
+                <a href="{{route('website.contact.show', ['id' => $contact->id])}}" class="btn btn-primary ">Edit</a>
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
         </div>
     </div>
     <br>
