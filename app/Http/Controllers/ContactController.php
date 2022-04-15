@@ -2,10 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\ContactRepository;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
+
+    protected $repository;
+
+    public function __construct(ContactRepository $repository)
+    {
+        $this->repository = $repository;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +21,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        $contacts = $this->repository->getContacts();
+
+        return view('website.home.index', compact('contacts'));
     }
 
     /**
