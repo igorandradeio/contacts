@@ -1,0 +1,26 @@
+@extends('layouts.website')
+@section('title', 'Contacts - Home Page')
+@section('content')
+
+<h1>All contacts</h1>
+
+<hr class="col-3 col-md-2 mb-5">
+<div class="container">
+    @foreach($contacts as $contact)
+
+    <div class="card">
+        <div class="card-header">
+            {{$contact->name}}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{$contact->contact}}</h5>
+            <p class="card-text">{{$contact->email}}</p>
+            <a href="#" class="btn btn-primary">Edit</a>
+            <a href="#" class="btn btn-danger">Delete</a>
+
+        </div>
+    </div>
+    <br>
+    @endforeach
+</div>
+@endsection
