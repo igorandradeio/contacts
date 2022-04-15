@@ -13,3 +13,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+.styleci.yml
+docker-compose.yml
+.gitignore
+docker/nginx/app.conf
