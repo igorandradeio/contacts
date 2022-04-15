@@ -36,5 +36,10 @@
         <br>
         <button type="submit" class="btn btn-primary mb-2">Save</button>
     </form>
+    <form action="{{ route('admin.contact.destroy', $contact->id) }}" method="post">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
 </div>
 @endsection
