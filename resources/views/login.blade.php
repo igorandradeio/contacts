@@ -57,11 +57,11 @@
 
             <div class="form-floating">
                 <input type="email" class="form-control" name="email" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
+                <label for="floatingInput">Email address: root@root.com</label>
             </div>
             <div class="form-floating">
                 <input type="password" class="form-control" name="password" placeholder="Password">
-                <label for="floatingPassword">Password</label>
+                <label for="floatingPassword">Password: password</label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
         </form>
