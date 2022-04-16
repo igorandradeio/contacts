@@ -33,9 +33,18 @@
 <body>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
         <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-            <a href="{{route('admin.contact.home')}}">
-                <h1>Contacts</h1>
-            </a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-10">
+                        <a href="{{route('admin.contact.home')}}">
+                            <h1>Contacts</h1>
+                        </a>
+                    </div>
+                    <div class="col-2">
+                        <a href="{{route('logout')}}" class="btn btn-secondary ">Logout</a>
+                    </div>
+                </div>
+            </div>
         </header>
         <main>
             @yield('content')

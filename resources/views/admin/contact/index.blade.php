@@ -5,7 +5,6 @@
 <h1>All contacts</h1>
 <a href="{{route('admin.contact.create')}}" class="btn btn-primary ">Add Contact</a>
 
-
 <hr class="col-3 col-md-2 mb-5">
 <div class="container">
     @foreach($contacts as $contact)
