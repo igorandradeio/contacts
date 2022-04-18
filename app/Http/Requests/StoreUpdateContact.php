@@ -26,11 +26,11 @@ class StoreUpdateContact extends FormRequest
         $rules = [
             'name' => ['string', 'required', 'min:5'],
             'contact' => ['required', 'digits:9', 'unique:contacts'],
-            'email' => ['email', 'required'],
+            'email' => ['email:rfc,dns', 'required'],
         ];
 
         if ($this->method() == 'PUT') {
-            $rules['contact'] = ['unique:contacts,contact,' . $this->id];
+            $rules['contact'] = ['required', 'digits:9', 'unique:contacts,contact,' . $this->id];
         }
 
         return $rules;
